@@ -6,7 +6,57 @@
   <link rel="stylesheet" href="../../../bootstrap-3.3.7-dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../../../css/main.css">
 
-  <link rel="stylesheet" type="text/css" href="../../../js/vue.min.js">
+  <script src="../../../js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+    function getCloudware() {
+      $.ajax({
+        type: "GET",
+        url: "http://api.cl.descloud.io/v1/cloudwares",
+        dataType:"text",
+        success: function(data){
+          var json = eval("("+data+")");
+          var json = JSON.parse( data );
+          for(var i in json){
+              if(json[i].name=="Rstudio"){
+                $("#cloudwareID").val(json[i].id);
+              }
+          }
+        },
+        error: function(XMLHttpRequest) {
+          alert(XMLHttpRequest.status);
+        }
+      });
+    }
+    function run() {
+      var cid = $("#cloudwareID").val();
+      //alert("cid:"+cid);
+      $.ajax({
+        type: "POST",
+        url: "http://api.cl.descloud.io/v1/instances/",
+        data: "cloudware_id="+cid,
+        //data:{cloudware_id:+cid},
+        headers: {
+            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OTFiODdhOC02ZWY4LTQ0YzktYjhmZi1jMmMyNzAyZDBiYjIiLCJpc3MiOiJodHRwOlwvXC9hcGkuY2wuZGVzY2xvdWQuaW9cL3YxXC90b2tlbiIsImlhdCI6MTUwMzk4MzkzOCwiZXhwIjoxNTA0MDcwMzM4LCJuYmYiOjE1MDM5ODM5MzgsImp0aSI6InBJeW1zQU1HM1NxV3E0QlEifQ.IdtdHOM1NMAOw0Z2P61PeCR2vzR2L-t9gej_fOfoq18',
+        },
+        success: function(data){
+          window.location.href='http://cl.descloud.io/instances/'+cid+'/view';
+        },
+        error: function(XMLHttpRequest){
+          alert(XMLHttpRequest.status);
+        }
+      });
+    }
+    /*$(document).ready(function(){
+      $("button").click(function(){
+        $.get("http://api.cl.descloud.io/v1/cloudwares",function(data,status){
+          alert("数据：" + data + "\n状态：" + status);
+
+        });
+      });
+    });
+    f27f91a5-963c-469f-a5db-3a1e236cfd43*/
+  </script>
+
   <style type="text/css">
     body{
       padding-top: 50px !important;
@@ -80,7 +130,7 @@
 
   </style>
 </head>
-<body>
+<body onload="getCloudware()">
   <div class="container-fluid">
   <div class="row row-common-style row-height text-center">
     <h1 class="color-black">k-means聚类</h1>
@@ -121,47 +171,9 @@
     <img class="img-responsive" src="img1.png">
 
 
-    <script>
-      export default {
-        data () {
-          return {
-            cloudwares: []
-          }
-        },
-        created() {
-          this.$http.get('cloudwares').then(resp => {
-            this.cloudwares = resp.body
-          })
-        },
-        methods: {
-          logout() {
-            localStorage.removeItem('token')
-            this.$router.push('/')
-          },
-          run(cloudware) {
-            document.getElementById('mask').style.display = 'block'
-            this.$http.post('instances', {cloudware_id: cloudware.id}).then(resp => {
-              document.getElementById('mask').style.display = 'none'
-              this.$router.push({name: 'instancesView', params: {id: resp.body.id}})
-            })
-          }
-        }
-      }
-    </script>
-    <div class="row">
-      <div class="col-md-3" v-for="cloudware in cloudwares">
-          <div v-if="cloudware.id==='f27f91a5-963c-469f-a5db-3a1e236cfd43'">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <div class="title">
-                  <h5>{{cloudware.name}}</h5>
-                </div>
-                <button class="btn btn-success btn-block" @click="run(cloudware)">运行实例</button>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
+    <input type="hidden" name="cloudwareID" id="cloudwareID">
+    <button class="btn btn-success btn-block" type="button" onclick="run()">运行实例</button>
+
   </div>
 </div>
 </body>

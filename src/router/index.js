@@ -29,7 +29,10 @@ import EbigdataE from '@/components/bigdataExperiment/bigdataE.vue'
 import Edm from '@/components/bigdataExperiment/dm.vue'
 import BigdataProject from '@/components/bigdataProject/Index.vue'
 
-
+import Analysismining from '@/components/analysismining/Index.vue'
+import EdataPretreatment from '@/components/analysismining/dataPretreatment.vue'
+import Edatamining from '@/components/analysismining/datamining.vue'
+import Epythonda from '@/components/analysismining/pythonda.vue'
 Vue.use(Router)
 
 var router = new Router({
@@ -127,6 +130,22 @@ var router = new Router({
     },{
       path: 'bigdatae',
       component: EbigdataE
+    }]
+  },{
+    path: '/analysismining',
+    component: Analysismining,
+    children: [{
+      path: '',
+      component: EdataPretreatment
+    },{
+      path: 'datamining',
+      component: Edatamining
+    },{
+      path: 'pythonda',
+      component: Epythonda
+    },{
+      path: 'dataPretreatment',
+      component: EdataPretreatment
     }]
   },{
     path: '/bigdataproject',
