@@ -30,13 +30,15 @@
     function run() {
       var cid = $("#cloudwareID").val();
       //alert("cid:"+cid);
+      var token = localStorage.getItem('token');
+      //alert(token);
       $.ajax({
         type: "POST",
         url: "http://api.cl.descloud.io/v1/instances/",
         data: "cloudware_id="+cid,
         //data:{cloudware_id:+cid},
         headers: {
-            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1OTFiODdhOC02ZWY4LTQ0YzktYjhmZi1jMmMyNzAyZDBiYjIiLCJpc3MiOiJodHRwOlwvXC9hcGkuY2wuZGVzY2xvdWQuaW9cL3YxXC90b2tlbiIsImlhdCI6MTUwMzk4MzkzOCwiZXhwIjoxNTA0MDcwMzM4LCJuYmYiOjE1MDM5ODM5MzgsImp0aSI6InBJeW1zQU1HM1NxV3E0QlEifQ.IdtdHOM1NMAOw0Z2P61PeCR2vzR2L-t9gej_fOfoq18',
+            'Authorization': 'Bearer '+token,
         },
         success: function(data){
           window.location.href='http://cl.descloud.io/instances/'+cid+'/view';
@@ -53,8 +55,8 @@
 
         });
       });
-    });
-    f27f91a5-963c-469f-a5db-3a1e236cfd43*/
+    });*/
+    //f27f91a5-963c-469f-a5db-3a1e236cfd43
   </script>
 
   <style type="text/css">

@@ -27,12 +27,12 @@
     data () {
       return {
         experiments: [
-          {title:"分类预测基本流程实验",description:"分类预测基本流程",link:"/static/amExperiments/dataPretreatment/R_dataIntegration/R_dataIntegration.html"},
-          {title:"数据预处理实验",description:"数据预处理",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"决策树分类方法实验",description:"决策树分类方法",link:"/static/amExperiments/dataPretreatment/R_dataTransformation/R_dataTransformation.html"},
-          {title:"高级分类方法实验",description:"高级分类方法",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"聚类分析实验",description:"聚类分析",link:"/static/amExperiments/dataPretreatment/R_dataReduction/R_dataTransformation.html"},
-          {title:"关联分析实验",description:"关联分析",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
+          {title:"R语言支持向量机分类实验",description:"支持向量机分类",link:"/static/amExperiments/dataPretreatment/R_dqa/R_dqa.html"},
+          {title:"Python支持向量机分类实验",description:"支持向量机分类",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
+          {title:"R语言决策树分类实验",description:"决策树分类",link:"/static/amExperiments/dataPretreatment/R_dfa/R_dfa.html"},
+          {title:"Python决策树分类实验",description:"决策树分类",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
+          {title:"R语言随机森林分类实验",description:"随机森林分类",link:"/static/amExperiments/dataPretreatment/R_scf/R_scf.html"},
+          {title:"Python随机森林分类实验",description:"随机森林分类",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
         ]
       }
     },

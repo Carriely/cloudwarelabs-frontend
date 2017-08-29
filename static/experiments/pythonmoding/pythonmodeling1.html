@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../../../bootstrap-3.3.7-dist/css/bootstrap.paper.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+  <style type="text/css">
+    body{
+      padding-top: 50px !important;
+    }
+    .center
+    {
+      margin:auto;
+      width:70%;
+    <!--background-color:#b0e0e6;-->
+    }
+    .divcss5
+    {
+      line-height: 22px;
+    }
+
+    .backtop{
+      #position: fixed;
+      #bottom: 50px;
+      #right: 20px;
+      #padding: 10px;
+      height: 40px;
+      width: 45px;
+      background-color: rgba(0,0,0,0.45);
+      text-align: center;
+      border-radius: 2px;
+    }
+    .loadingHide {
+      display: none;
+    }
+    #course_container a,#course_container a:visited,#course_container a:hover,#course_container a:active { /*全部状态都一样的效果*/
+    //color: grey;
+    //text-decoration: none;
+    }
+    .row-common-style {
+      #background-color: #C0392B;
+      background-image: url(../img/task/task_bg.jpg);
+      background-size:cover;
+      background-position: center;
+      margin-bottom: 20px;
+    }
+    .row-height {
+      height:75px;
+    }
+    .color-white {
+      color: white;
+    }
+    .p-color {
+      color: rgb(255, 196, 174);
+    }
+    p {
+      margin: 0;
+    }
+    h1 {
+      margin-top: 42px;
+      font-size: 37px;
+    }
+    .p-title {
+      font-size: 16px;
+    }
+    .task-title {
+      font-size: 16.5px !important;
+    }
+    .text-margin {
+      margin-top: 8px;
+      margin-bottom: 25px;
+    }
+    @media (min-width:768px) {
+      .p-title {
+        font-size: 24px;
+      }
+      h1 {
+        margin-top: 57px;
+        font-size: 53px;
+      }
+      .row-height {
+        height: 180px;
+      }
+      .task-title {
+        font-size: 18px !important;
+      }
+    }
+
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("button").click(fuction(){
+        $.post("api.cl.descloud.io/v1/instances/{cloudwareId}",
+          {
+            name:"cloudware",
+            url:"http:// api.cl.descloud.io/v1/instances/{cloudwareId}"
+          },
+            function ((data,status)){
+          alter("数据：\n" + data + "\n状态：" + status);
+            });
+      });
+
+    });
+  </script>
+</head>
+<body>
+<div class="container-fluid center">
+  <div class="row row-common-style row-height text-center">
+    <h1 class="color-black">Python统计与建模</h1>
+    <p class="p-color p-title">本篇将介绍Python语言在统计与建模中的基本编程</p>
+  </div>
+</div>
+<hr>
+<div class="center">
+  <div class="col-md-8 col-md-offset-2  divcss5">
+    <h2>函数</h2>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;函数是重用的程序段。它们允许你给一块语句一个名称，然后你可以在你的程序的任何地方使 用这个名称任意多次地运行这个语句块。这被称为 调用 函数。我们已经使用了许多内建的函 数，比如len和range。
+      函数通过def关键字定义。def关键字后跟一个函数的 标识符 名称，然后跟一对圆括号。圆括号 之中可以包括一些变量名，该行以冒号结尾。接下来是一块语句，它们是函数体。下面这个例 子将说明这事实上是十分简单的：
+    </p>
+    <h3>1 定义函数</h3>
+    <pre>#!/usr/bin/python
+# Filename: function1.py
+def sayHello():
+print 'Hello World!'
+# block belonging to the function
+sayHello() # call the function
+输出
+$ python function1.py
+Hello World!
+</pre>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;它如何工作
+      我们使用上面解释的语法定义了一个称为sayHello的函数。这个函数不使用任何参数，因此在 圆括号中没有声明任何变量。参数对于函数而言，只是给函数的输入，以便于我们可以传递不 同的值给函数，然后得到相应的结果。
+    </p>
+  <h3>2 函数形参</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;函数取得的参数是你提供给函数的值，这样函数就可以利用这些值 做 一些事情。这些参数就 像变量一样，只不过它们的值是在我们调用函数的时候定义的，而非在函数本身内赋值。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;参数在函数定义的圆括号对内指定，用逗号分割。当我们调用函数的时候，我们以同样的方式 提供值。注意我们使用过的术语——函数中的参数名称为 形参 而你提供给函数调用的值称为 实参 。</p>
+    <pre>例2 使用函数形参
+#!/usr/bin/python
+# Filename: func_param.py
+def printMax(a, b):
+if a > b:
+print a, 'is maximum'
+else:
+print b, 'is maximum'
+printMax(3, 4) # directly give literal values
+x = 5
+y = 7
+printMax(x, y) # give variables as arguments
+输出
+$ python func_param.py
+4 is maximum
+7 is maximum
+</pre>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里，我们定义了一个称为printMax的函数，这个函数需要两个形参，叫做a和b。我们使用if.. else语句找出两者之中较大的一个数，并且打印较大的那个数。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在第一个printMax使用中，我们直接把数，即实参，提供给函数。在第二个使用中，我们使用变量调用函数。printMax(x, y)使实参x的值赋给形参a，实参y的值赋给形参b。在两次调用中， printMax函数的工作完全相同。</p>
+    <h3>3 局部变量</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当你在函数定义内声明变量的时候，它们与函数外具有相同名称的其他变量没有任何关系，即 变量名称对于函数来说是局部的。这称为变量的作用域。所有变量的作用域是它们被定义的块，从它们的名称被定义的那点开始。</p>
+    <pre>例6.3 使用局部变量
+      #!/usr/bin/python
+      # Filename: func_local.py
+      def func(x):
+      print 'x is', x
+      x = 2
+      print 'Changed local x to', x
+
+      x = 50
+      func(x)
+      print 'x is still', x
+      输出
+      $ python func_local.py
+      x is 50 Changed local x to 2
+      x is still 50
+    </pre>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在函数中，我们第一次使用x的值的时候，Python使用函数声明的形参的值。接下来，我们把值2赋给x。x是函数的局部变量。所以，当我们在函数内改变x的值的时候，在主块中定义的x不受影响。在最后一个print语句中，我们证明了主块中的x的值确实没有受到影响。</p>
+    <h3>4 使用global语句</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果你想要为一个定义在函数外的变量赋值，那么你就得告诉Python这个变量名不是局部的， 而是全局的。我们使用global语句完成这一功能。没有global语句，是不可能为定义在函数外的变量赋值的。你可以使用定义在函数外的变量的值（假设在函数内没有同名的变量）。然而，我并不鼓励你 这样做，并且你应该尽量避免这样做，因为这使得程序的读者会不清楚这个变量是在哪里定义 的。使用global语句可以清楚地表明变量是在外面的块定义的。</p>
+    <pre>例6.4 使用global语句
+#!/usr/bin/python
+# Filename: func_global.py
+def func():
+global x
+print 'x is', x
+x = 2
+print 'Changed local x to', x
+x = 50
+func()
+print 'Value of x is', x
+输出
+$ python func_global.py
+x is 50
+Changed global x to 2
+Value of x is 2
+</pre>
+    <p>
+      它如何工作<br>
+      global语句被用来声明x是全局的——因此，当我们在函数内把值赋给x的时候，这个变化也反 映在我们在主块中使用x的值的时候。
+    </p>
+    <h3>5  默认参数值</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于一些函数，你可能希望它的一些参数是 可选 的，如果用户不想要为这些参数提供值的 话，这些参数就使用默认值。这个功能借助于默认参数值完成。你可以在函数定义的形参名后 加上赋值运算符（=）和默认值，从而给形参指定默认参数值。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意，默认参数值应该是一个参数。更加准确的说，默认参数值应该是不可变的——这会在后 面的章节中做详细解释。从现在开始，请记住这一点。</p>
+    <pre>例7.5 使用默认参数值
+      #!/usr/bin/python
+      # Filename: func_default.py
+      def say(message, times = 1):
+      print message * times
+      say('Hello')
+      say('World', 5)
+      输出
+      $ python func_default.py
+      Hello
+      WorldWorldWorldWorldWorld
+    </pre>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名为say的函数用来打印一个字符串任意所需的次数。如果我们不提供一个值，那么默认地， 字符串将只被打印一遍。我们通过给形参times指定默认参数值1来实现这一功能。在第一次使用say的时候，我们只提供一个字符串，函数只打印一次字符串。在第二次使用say 的时候，我们提供了字符串和参数5，表明我们想要说这个字符串消息5遍。</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;只有在形参表末尾的那些参数可以有默认参数值，即你不能在声明函数形参的时候，先声明有默认值的形参而后声明没有默认值的形参。 这是因为赋给形参的值是根据位置而赋值的。例如，def func(a, b=5)是有效的，但是def func (a=5, b)是无效的。</p>
+    <h3>6 关键参数</h3>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果你的某个函数有许多参数，而你只想指定其中的一部分，那么你可以通过命名来为这些参 数赋值——这被称作关键参数 ——我们使用名字（关键字）而不是位置（我们前面所一直使 用的方法）来给函数指定实参。这样做有两个优势: 一，由于我们不必担心参数的顺序，使用函数变得更加简单了。二、 假设其他参数都有默认值，我们可以只给我们想要的那些参数赋值。使用关键参数</p>
+    <pre>例6.6 使用关键参数
+#!/usr/bin/python # Filename: func_key.py
+def func(a, b=5, c=10):
+print 'a is', a, 'and b is', b, 'and c is', c
+func(3, 7)
+func(25, c=24)
+func(c=50, a=100)
+输出
+$ python func_key.py
+a is 3 and b is 7 and c is 10
+a is 25 and b is 5 and c is 24
+a is 100 and b is 5 and c is 50
+</pre>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;它如何工作<br>
+      名为func的函数有一个没有默认值的参数，和两个有默认值的参数。<br>
+      在第一次使用函数的时候， func(3, 7)，参数a得到值3，参数b得到值7，而参数c使用默认值 10。在第二次使用函数func(25, c=24)的时候，根据实参的位置变量a得到值25。根据命名，即关键 参数，参数c得到值24。变量b根据默认值，为5。在第三次使用func(c=50, a=100)的时候，我们使用关键参数来完全指定参数值。注意，尽管函 数定义中，a在c之前定义，我们仍然可以在a之前指定参数c的值。
+    </p>
+    <br>
+    <br>
+    <button>开启云件</button>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+</body>
+</html>

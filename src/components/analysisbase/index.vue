@@ -3,15 +3,13 @@
     <common-header></common-header>
     <div class="container">
       <div class="page-header">
-        <h4>实验列表</h4>
+        <h4>数据分析与挖掘</h4>
       </div>
       <div class="row">
         <div class="col-md-2">
           <div class="list-group">
-            <router-link to="/bigdataexperiment/language" class="list-group-item">R语言编程基础</router-link>
-            <router-link to="/bigdataexperiment/dm" class="list-group-item">R语言统计与建模</router-link>
-            <router-link to="/bigdataexperiment/bigdatae" class="list-group-item">Python语言编程基础</router-link>
-            <router-link to="/bigdataexperiment/bdm" class="list-group-item">Python语言统计与建模</router-link>
+            <router-link to="/analysisbase/Hadoop" class="list-group-item">Hadoop大数据分析实验</router-link>
+            <router-link to="/analysisbase/HDFS" class="list-group-item">HDFS</router-link>
           </div>
         </div>
         <div class="col-md-10">
@@ -36,7 +34,7 @@
       }
     },
     created() {
-      this.$router.push('/bigdataExperiment/language')
+      this.$router.push('/analysisbase/Hadoop')
     }
   }
 </script>

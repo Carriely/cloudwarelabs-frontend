@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简介 Python的特色概括</title>
+    <link rel="stylesheet" href="../../../bootstrap-3.3.7-dist/css/bootstrap.paper.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+    <style type="text/css">
+        body{
+            padding-top: 50px !important;
+        }
+        .center
+        {
+          margin:auto;
+          width:70%;
+          <!--background-color:#b0e0e6;-->
+        }
+        .divcss5
+        {
+          line-height: 22px;
+        }
+
+        .backtop{
+            #position: fixed;
+            #bottom: 50px;
+            #right: 20px;
+            #padding: 10px;
+            height: 40px;
+            width: 45px;
+            background-color: rgba(0,0,0,0.45);
+            text-align: center;
+            border-radius: 2px;
+        }
+        .loadingHide {
+            display: none;
+        }
+        #course_container a,#course_container a:visited,#course_container a:hover,#course_container a:active { /*全部状态都一样的效果*/
+        //color: grey;
+        //text-decoration: none;
+        }
+        .row-common-style {
+            #background-color: #C0392B;
+            background-image: url(../img/task/task_bg.jpg);
+            background-size:cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+        .row-height {
+            height:75px;
+        }
+        .color-white {
+            color: white;
+        }
+        .p-color {
+            color: rgb(255, 196, 174);
+        }
+        p {
+            margin: 0;
+        }
+        h1 {
+            margin-top: 42px;
+            font-size: 37px;
+        }
+        .p-title {
+            font-size: 16px;
+        }
+        .task-title {
+            font-size: 16.5px !important;
+        }
+        .text-margin {
+            margin-top: 8px;
+            margin-bottom: 25px;
+        }
+        @media (min-width:768px) {
+            .p-title {
+                font-size: 24px;
+            }
+            h1 {
+                margin-top: 57px;
+                font-size: 53px;
+            }
+            .row-height {
+                height: 180px;
+            }
+            .task-title {
+                font-size: 18px !important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid center">
+    <div class="row row-common-style row-height text-center">
+        <h1 class="color-black">Python语言编程基础</h1>
+        <p class="p-color p-title">本篇将介绍Python语言在数据分析中的基本编程</p>
+    </div>
+</div>
+<hr>
+<div class="center">
+    <div class="col-md-8 col-md-offset-2  divcss5">
+      <h2>1.1 简介 Python的特色概括</h2>
+      <img class="img-responsive" src="1.jpg">
+      <p>Python语言是少有的一种可以称得上即简单又功能强大的编程语言。你将惊喜地发现Python语 言是多么地简单，它注重的是如何解决问题而不是编程语言的语法和结构。</p>
+      <p>Python的官方介绍是：Python是一种简单易学，功能强大的编程语言，它有高效率的高层数据结构，简单而有效地实现面向对象编程。Python简洁的语法和对动态输入的支持，再加上解释性语言的本质，使得它在大多数平台上的许多领域都是一个理想的脚本语言，特别适用于快速的应用程序开发。我会在下一节里详细地讨论Python的这些特点。注释 Python语言的创造者Guido van Rossum是根据英国广播公司的节目“蟒蛇飞行马戏”命名这个语言的，并非他本人特别喜欢蛇缠起它们的长身躯碾死动物觅食。
+      </p>
+      <br>
+      <p>Python的特色:</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;(1)简单。Python是一种代表简单主义思想的语言。阅读一个良好的Python程序就感觉像是在读英 语一样，尽管这个英语的要求非常严格！Python的这种伪代码本质是它最大的优点之一。它使你能够专注于解决问题而不是去搞明白语言本身。
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;(2)易学。就如同你即将看到的一样，Python极其容易上手。前面已经提到了，Python有极其简单的语法。免费、开源。Python是FLOSS（自由/开放源码软件）之一。简单地说，你可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS是基 于一个团体分享知识的概念。这是为什么Python如此优秀的原因之一——它是由一群希望看到一个更加优秀的Python的人创造并经常改进着的高层语言。当你用Python语言编写程序的时候，你无需考虑诸如如何管理你的程序使用的内存一类的底层细节。
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;(3)可移植性：由于它的开源本质，Python已经被移植在许多平台上（经过改动使它能够工作在不同平 台上）。如果你小心地避免使用依赖于系统的特性，那么你的所有Python程序无需修改 就可以在下述任何平台上面运行。这些平台包括Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、 AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、 VxWorks、PlayStation、Sharp Zaurus、Windows CE甚至还有PocketPC！
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;(4)解释性。这一点需要一些解释。一个用编译性语言比如C或C++写的程序可以从源文件（即C或C++语言）转换到一个你 的计算机使用的语言（二进制代码，即0和1）。这个过程通过编译器和不同的标记、选 项完成。当你运行你的程序的时候，连接/转载器软件把你的程序从硬盘复制到内存中 并且运行。而Python语言写的程序不需要编译成二进制代码。你可以直接从源代码 运行 程序。在 计算机内部，Python解释器把源代码转换成称为字节码的中间形式，然后再把它翻译成 计算机使用的机器语言并运行。事实上，由于你不再需要担心如何编译程序，如何确保 连接转载正确的库等等，所有这一切使得使用Python更加简单。由于你只需要把你的 Python程序拷贝到另外一台计算机上，它就可以工作了，这也使得你的Python程序更加易于移植。 面向对象。Python即支持面向过程的编程也支持面向对象的编程。在面向过程的语言中，程序是 由过程或仅仅是可重用代码的函数构建起来的。在 面向对象的语言中，程序是由数据和功能组合而成的对象构建起来的。与其他主要的语言如C++和Java相比，Python以一种非常强大又简单的方式实现面向对象编程。
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;(5)可扩展性：如果你需要你的一段关键代码运行得更快或者希望某些算法不公开，你可以把你的部分 程序用C或C++编写，然后在你的Python程序中使用它们。
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;(6)可嵌入性：你可以把Python嵌入你的C/C++程序，从而向你的程序用户提供脚本功能。
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;(7)丰富的库：Python标准库确实很庞大。它可以帮助你处理各种工作，包括正则表达式、文档生成、 单元测试、线程、数据库、网页浏览器、CGI、FTP、电子邮件、XML、XML-RPC、 HTML、WAV文件、密码系统、GUI（图形用户界面）、Tk和其他与系统有关的操作。 记住，只要安装了Python，所有这些功能都是可用的。这被称作Python的“功能齐 全”理念。除了标准库以外，还有许多其他高质量的库，如wxPython、Twisted和Python图像库等等。
+      </p>
+      <br>
+      <p>概括</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;Python确实是一种十分精彩又强大的语言。它合理地结合了高性能与使得编写程序简单有趣的特色。
+      </p>
+      <br>
+      <br>
+      <h2>1.2 下载与安装Python
+      </h2>
+      <p>如果你正在使用一个Linux的发行版比如Fedora或者Mandrake或者其他（你的选择），或者一个 BSD系统比如FreeBSD，那么你可能已经在你的系统里安装了Python。要测试你是否已经随着你的Linux包安装了Python，你可以打开一个shell程序（就像konsole或 gnome-terminal）然后输入如下所示的命令python -V。
+      </p>
+      <br>
+      <code>$ python -V Python 2.3.4
+      </code>
+
+      <p>注释 $是shell的提示符。根据你的操作系统的设置，它可能与你那个不同，因此我只用$符号表示提示符。如果你看见向上面所示的那样一些版本信息，那么你已经安装了Python了。
+      </p>
+      <br>
+      <p>如果你得到像这样的消息：</p>
+      <code>$ python -V bash: python: command not found
+      </code>
+      <br>
+      <p>那么你还没有安装Python。这几乎不可能，只是极其偶尔才会遇到。在这种情况下，你有两种方法在你的系统上安装Python。利用你的操作系统附带的包管理软件安装二进制包，比如Fedora Linux的yum、 Mandrake Linux的urpmi、Debian Linux的apt-get、FreeBSD的pkg_add等等。注意，使用这 种方法的话，你需要连接因特网。你也可以从别的地方下载二进制包然后拷贝到你的PC中安装。你可以从源代码编译Python然后安装。在网站上有编译的指令。
+      </p>
+      <p>Windows®用户
+      </p>
+      <p>Windows®用户可以访问Python.org/download，从网站上下载最新的版本（在写本书的时候， 最新版本是2.3.4版）。它的大小大约是9.4MB，与其他大多数语言相比是十分紧凑的。安装过 程与其他Windows软件类似。提示：即便安装程序为你提供了不检查 可选 组件的选项，你也不要不作任何检查！有些组件对你很 有用，特别是集成开发环境。
+      </p>
+      <p>有趣的是，大约70%的Python下载是来自Windows用户的。当然，这并不能说明问题，因为几 乎所有的Linux用户已经在安装系统的时候默认安装了Python。在Windows命令行中使用Python 如果你想要从Windows命令行调用Python，那么你需要先正确的设置PATH变量。对于Windows 2000、XP、2003，点击控制面板->系统->高级->环境变量。在“系统变量”表单 中点击叫做PATH的变量，然后编辑这个变量，把;C:\Python23加到它的结尾。当然，是Python 所在的正确目录名。对于较旧版本的Windows，把下面这行加到文件C:\AUTOEXEC.BAT中：PATH=%PATH%;C: \Python23，然后重新启动系统。对于Windows NT，则使用AUTOEXEC.NT文件。
+      </p>
+      <br>
+      <p>概括</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;对于Linux系统，很可能你已经在你的系统里安装了Python。否则，你可以通过你的发行版附 带的包管理软件安装Python。对于Windows系统，安装Python就是下载安装程序然后双击它那 么简单。从现在起，我们将假设你已经在你的系统里安装了Python。
+      </p>
+      <br>
+      <br>
+      <br>
+      <br>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

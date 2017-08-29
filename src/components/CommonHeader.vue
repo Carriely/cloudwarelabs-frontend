@@ -21,14 +21,14 @@
             <router-link tag="li" to="/analysismining"><a>数据分析与挖掘</a></router-link>
             <router-link tag="li" to="/analysisbase"><a>大数据分析基础</a></router-link>
             <router-link tag="li" to="/biganalysismining"><a>大数据分析与挖掘</a></router-link>
-            <router-link tag="li" to="/exampleanaly"><a>基于大数据的案例分析</a></router-link>
+            <router-link tag="li" to="/bigdataProject"><a>基于大数据的案例分析</a></router-link>
             <router-link tag="li" to="/datasrc"><a>数据源及数据描述</a></router-link>
-            <router-link tag="li" to="/exercise"><a>练兵场</a></router-link>
+            <router-link tag="li" to="/cloudwares"><a>练兵场</a></router-link>
 
-            <router-link tag="li" to="/management" v-if="user.role == 'admin'"><a>系统管理</a></router-link>
+            <!--<router-link tag="li" to="/management" v-if="user.role == 'admin'"><a>系统管理</a></router-link>-->
             <router-link tag="li" to="/student" v-if="user.role == 'user'"><a>我的作业</a></router-link>
             <router-link tag="li" to="/teacher" v-if="user.role == 'teacher'"><a>作业管理</a></router-link>
-            <li><a target="_blank" href="//59.69.103.174:84">使用帮助</a></li>
+            <!--<li><a target="_blank" href="//59.69.103.174:84">使用帮助</a></li>-->
           </ul>
 
           <ul class="nav navbar-nav navbar-right">

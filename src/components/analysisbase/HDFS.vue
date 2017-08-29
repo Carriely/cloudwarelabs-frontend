@@ -27,12 +27,11 @@
     data () {
       return {
         experiments: [
-          {title:"分类预测基本流程实验",description:"分类预测基本流程",link:"/static/amExperiments/dataPretreatment/R_dataIntegration/R_dataIntegration.html"},
-          {title:"数据预处理实验",description:"数据预处理",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"决策树分类方法实验",description:"决策树分类方法",link:"/static/amExperiments/dataPretreatment/R_dataTransformation/R_dataTransformation.html"},
-          {title:"高级分类方法实验",description:"高级分类方法",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"聚类分析实验",description:"聚类分析",link:"/static/amExperiments/dataPretreatment/R_dataReduction/R_dataTransformation.html"},
-          {title:"关联分析实验",description:"关联分析",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
+          {title:"HDFS基本操作实验",description:"HDFS",link:"/static/amExperiments/dataPretreatment/R_dqa/R_dqa.html"},
+          {title:"MapReduce基础实验",description:"MapReduce基础",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
+          {title:"MapReduce高级特性实验",description:"MapReduce高级特性",link:"/static/amExperiments/dataPretreatment/R_dfa/R_dfa.html"},
+          {title:"迭代式MapReduce程序开发实验",description:"迭代式MapReduce",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
+          {title:"Hive基本操作实验",description:"Hive",link:"/static/amExperiments/dataPretreatment/R_scf/R_scf.html"},
         ]
       }
     },

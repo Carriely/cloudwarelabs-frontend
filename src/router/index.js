@@ -33,6 +33,14 @@ import Analysismining from '@/components/analysismining/Index.vue'
 import EdataPretreatment from '@/components/analysismining/dataPretreatment.vue'
 import Edatamining from '@/components/analysismining/datamining.vue'
 import Epythonda from '@/components/analysismining/pythonda.vue'
+
+import Analysisbase from '@/components/analysisbase/Index.vue'
+import EHadoop from '@/components/analysisbase/Hadoop.vue'
+import EHDFS from '@/components/analysisbase/HDFS.vue'
+
+import Biganalysismining from '@/components/biganalysismining/Index.vue'
+import EdataAnalysis from '@/components/biganalysismining/dataAnalysis.vue'
+
 Vue.use(Router)
 
 var router = new Router({
@@ -147,6 +155,29 @@ var router = new Router({
       path: 'dataPretreatment',
       component: EdataPretreatment
     }]
+  },{
+    path: '/analysisbase',
+    component: Analysisbase,
+    children: [{
+      path: '',
+      component: EHadoop
+    },{
+      path: 'Hadoop',
+      component: EHadoop
+    },{
+      path: 'HDFS',
+      component: EHDFS
+    },]
+  },{
+    path: '/biganalysismining',
+    component: Biganalysismining,
+    children: [{
+      path: '',
+      component: EdataAnalysis
+    },{
+      path: 'dataAnalysis',
+      component: EdataAnalysis
+    },]
   },{
     path: '/bigdataproject',
     component: BigdataProject

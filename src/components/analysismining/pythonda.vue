@@ -27,22 +27,11 @@
     data () {
       return {
         experiments: [
-          {title:"R语言数据质量分析实验",description:"数据质量分析",link:"/static/amExperiments/dataPretreatment/R_dqa/R_dqa.html"},
-          {title:"Python数据质量分析实验",description:"数据质量分析",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"R语言数据特征分析实验",description:"数据特征分析",link:"/static/amExperiments/dataPretreatment/R_dfa/R_dfa.html"},
-          {title:"Python数据特征分析实验",description:"数据特征分析",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"R语言统计特征函数实验",description:"统计特征函数",link:"/static/amExperiments/dataPretreatment/R_scf/R_scf.html"},
-          {title:"Python统计特征函数实验",description:"统计特征函数",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"R语言统计作图函数实验",description:"统计作图函数",link:"/static/amExperiments/dataPretreatment/R_spf/R_spf.html"},
-          {title:"Python统计作图函数实验",description:"统计作图函数",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"R语言数据清洗实验",description:"数据清洗",link:"/static/amExperiments/dataPretreatment/R_dataCleaning/R_dataCleaning.html"},
-          {title:"Python数据清洗实验",description:"数据清洗",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"R语言数据集成实验",description:"数据集成",link:"/static/amExperiments/dataPretreatment/R_dataIntegration/R_dataIntegration.html"},
-          {title:"Python数据集成实验",description:"数据集成",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"R语言数据变换实验",description:"数据变换",link:"/static/amExperiments/dataPretreatment/R_dataTransformation/R_dataTransformation.html"},
-          {title:"Python数据变换实验",description:"数据变换",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
-          {title:"R语言数据规约实验",description:"数据规约",link:"/static/amExperiments/dataPretreatment/R_dataReduction/R_dataTransformation.html"},
-          {title:"Python数据规约实验",description:"数据规约",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
+          {title:"数据降维实验",description:"数据降维",link:"/static/amExperiments/dataPretreatment/R_dqa/R_dqa.html"},
+          {title:"聚类分析实验",description:"聚类分析",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
+          {title:"k近邻分类实验",description:"k近邻分类",link:"/static/amExperiments/dataPretreatment/R_dfa/R_dfa.html"},
+          {title:"回归分析实验",description:"回归分析",link:"/static/amExperiments/dataPretreatment/R_scf/R_scf.html"},
+          {title:"决策树分类实验",description:"决策树分类",link:"/static/amExperiments/dataPretreatment/svm/svm.html"},
         ]
       }
     },
