@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>支持向量机</title>
+  <link rel="stylesheet" href="../../../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+  <style type="text/css">
+    body{
+      padding-top: 50px !important;
+    }
+    .backtop{
+      #position: fixed;
+      #bottom: 50px;
+      #right: 20px;
+      #padding: 10px;
+      height: 40px;
+      width: 45px;
+      background-color: rgba(0,0,0,0.45);
+      text-align: center;
+      border-radius: 2px;
+    }
+    .loadingHide {
+      display: none;
+    }
+    #course_container a,#course_container a:visited,#course_container a:hover,#course_container a:active { /*全部状态都一样的效果*/
+    //color: grey;
+    //text-decoration: none;
+    }
+    .row-common-style {
+      #background-color: #C0392B;
+      background-image: url(../img/task/task_bg.jpg);
+      background-size:cover;
+      background-position: center;
+      margin-bottom: 20px;
+    }
+    .row-height {
+      height:155px;
+    }
+    .color-white {
+      color: white;
+    }
+    .p-color {
+      color: rgb(255, 196, 174);
+    }
+    p {
+      margin: 0;
+    }
+    h1 {
+      margin-top: 42px;
+      font-size: 37px;
+    }
+    .p-title {
+      font-size: 16px;
+    }
+    .task-title {
+      font-size: 16.5px !important;
+    }
+    .text-margin {
+      margin-top: 8px;
+      margin-bottom: 25px;
+    }
+    @media (min-width:768px) {
+      .p-title {
+        font-size: 24px;
+      }
+      h1 {
+        margin-top: 57px;
+        font-size: 53px;
+      }
+      .row-height {
+        height: 220px;
+      }
+      .task-title {
+        font-size: 18px !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row row-common-style row-height text-center">
+    <h1 class="color-black">支持向量机</h1>
+    <p class="p-color p-title">支持向量机是一个用于二分类的非线性分类器</p>
+  </div>
+</div>
+<!--正文内容-->
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <!--<button class="btn-primary btn" style="float: right"><a href="../tool/r.html" target="_blank" style="text-decoration: none;color: white">在线实验</a></button>-->
+    <br/>
+    <br/>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;支持向量机首先是一种二分类模型，它的基本思想是找到线性空间中的一个超平面，可以将两类别正确分离并使几何间隔最大。当然能线性正确分隔的数据集毕竟很少，如果数据集线性不可分，即存在特异点，除去这些特异点后，数据集是线性可分的，则可以引入松弛变量和惩罚因子，使得分离间隔尽量大的同时误分类的点数目尽量少。对于非线性的分类问题，可以利用核技巧的方法，将数据集映射到高维空间中，在高维空间中训练数据集，找到能使分离间隔较大并且误分类点较少的超平面，这种方法叫做非线性支持向量机。支持向量机中对分离超平面的求解可以形式化为凸优化问题的求解，下面通过调用R语言中e1071包中的函数svm()展示支持向量机。</p>
+    <br/>
+    <pre>
+        # 加载e1071函数包
+        library(e1071)
+        # 导入iris数据集
+        data(iris)
+        # 首先通过散点图观察数据集的大致分布情况，如图3-所示
+        library(lattice)
+        xyplot(Petal.Length ~ Petal.Width, data = iris, groups = Species,  auto.key=list(corner=c(1,0)))
+
+    </pre>
+    <img class="img-responsive" src="./img1.png">
+    <pre>
+      # 调用svm函数并观察分类后的超平面
+      svm_model <- svm(Species~Petal.Length+Petal.Width,data=iris)
+      plot(svm_model,iris,Petal.Length~Petal.Width)
+    </pre>
+    <img class="img-responsive" src="randomforest/img2.png">
+  </div>
+</div>
+</body>
+</html>

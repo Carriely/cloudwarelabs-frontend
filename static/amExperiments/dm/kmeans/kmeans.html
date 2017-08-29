@@ -5,8 +5,6 @@
     <title>R语言编程基础实验</title>
   <link rel="stylesheet" href="../../../bootstrap-3.3.7-dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../../../css/main.css">
-
-  <link rel="stylesheet" type="text/css" href="../../../js/vue.min.js">
   <style type="text/css">
     body{
       padding-top: 50px !important;
@@ -120,48 +118,6 @@
         </pre>
     <img class="img-responsive" src="img1.png">
 
-
-    <script>
-      export default {
-        data () {
-          return {
-            cloudwares: []
-          }
-        },
-        created() {
-          this.$http.get('cloudwares').then(resp => {
-            this.cloudwares = resp.body
-          })
-        },
-        methods: {
-          logout() {
-            localStorage.removeItem('token')
-            this.$router.push('/')
-          },
-          run(cloudware) {
-            document.getElementById('mask').style.display = 'block'
-            this.$http.post('instances', {cloudware_id: cloudware.id}).then(resp => {
-              document.getElementById('mask').style.display = 'none'
-              this.$router.push({name: 'instancesView', params: {id: resp.body.id}})
-            })
-          }
-        }
-      }
-    </script>
-    <div class="row">
-      <div class="col-md-3" v-for="cloudware in cloudwares">
-          <div v-if="cloudware.id==='f27f91a5-963c-469f-a5db-3a1e236cfd43'">
-            <div class="panel panel-default">
-              <div class="panel-body">
-                <div class="title">
-                  <h5>{{cloudware.name}}</h5>
-                </div>
-                <button class="btn btn-success btn-block" @click="run(cloudware)">运行实例</button>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
   </div>
 </div>
 </body>

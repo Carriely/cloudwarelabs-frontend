@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../../../bootstrap-3.3.7-dist/css/bootstrap.paper.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/main.css">
+  <style type="text/css">
+    body{
+      padding-top: 50px !important;
+    }
+    .center
+    {
+      margin:auto;
+      width:70%;
+    <!--background-color:#b0e0e6;-->
+    }
+    .divcss5
+    {
+      line-height: 22px;
+    }
+
+    .backtop{
+      #position: fixed;
+      #bottom: 50px;
+      #right: 20px;
+      #padding: 10px;
+      height: 40px;
+      width: 45px;
+      background-color: rgba(0,0,0,0.45);
+      text-align: center;
+      border-radius: 2px;
+    }
+    .loadingHide {
+      display: none;
+    }
+    #course_container a,#course_container a:visited,#course_container a:hover,#course_container a:active { /*全部状态都一样的效果*/
+    //color: grey;
+    //text-decoration: none;
+    }
+    .row-common-style {
+      #background-color: #C0392B;
+      background-image: url(../img/task/task_bg.jpg);
+      background-size:cover;
+      background-position: center;
+      margin-bottom: 20px;
+    }
+    .row-height {
+      height:75px;
+    }
+    .color-white {
+      color: white;
+    }
+    .p-color {
+      color: rgb(255, 196, 174);
+    }
+    p {
+      margin: 0;
+    }
+    h1 {
+      margin-top: 42px;
+      font-size: 37px;
+    }
+    .p-title {
+      font-size: 16px;
+    }
+    .task-title {
+      font-size: 16.5px !important;
+    }
+    .text-margin {
+      margin-top: 8px;
+      margin-bottom: 25px;
+    }
+    @media (min-width:768px) {
+      .p-title {
+        font-size: 24px;
+      }
+      h1 {
+        margin-top: 57px;
+        font-size: 53px;
+      }
+      .row-height {
+        height: 180px;
+      }
+      .task-title {
+        font-size: 18px !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<div class="container-fluid center">
+  <div class="row row-common-style row-height text-center">
+    <h1 class="color-black">Python语言编程基础</h1>
+    <p class="p-color p-title">本篇将介绍Python语言第3章——基本概念</p>
+  </div>
+</div>
+<hr>
+<div class="center">
+  <div class="col-md-8 col-md-offset-2  divcss5">
+    <h2>3.1 数</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;一个字面意义上的常量的例子是如同5、1.23、9.25e-3这样的数，或者如同'This is a string'、"It's a string!"这样的字符串。它们被称作字面意义上的，因为它们具备 字面 的意义——你按照它们 的字面意义使用它们的值。数2总是代表它自己，而不会是别的什么东西——它是一个常量， 因为不能改变它的值。因此，所有这些都被称为字面意义上的常量。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;在Python中有4种类型的数——整数、长整数、浮点数和复数。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.	对于Windows用户，只要你正确的设置了PATH变量，你应该可以从命令行启动解释器。或者 你可以选择使用IDLE程序。IDLE是集成开发环境的缩写。点击开始->程序->Python 2.3->IDLE (Python GUI)。Linux用户也可以使用IDLE。</p>
+      <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意，>>>是你键入Python语句的提示符。</b></p>
+    <br>
+    <br>
+      <p>例2.1 使用带提示符的Python解释器</p>
+    <br>
+      <code>&nbsp;&nbsp;&nbsp;&nbsp;>>> print 'hello world' </code>
+      <code>hello world </code>
+      <br>
+      <img class="img-responsive" src="2.png">
+      <br>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;注意，Python会在下一行立即给出你输出！你刚才键入的是一句Python 语句 。我们使用print（不要惊讶）来打印你提供给它的值。这里，我们提供的是文本Hello World，它被迅速地打印在屏幕上。</p>
+      <h2>2.2 如何退出Python提示符</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;如果你使用的是Linux/BSD shell，那么按Ctrl-d退出提示符。如果是在Windows命令行中，则按 Ctrl-z再按Enter。</p>
+      <h2>2.3 挑选一个编辑器</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;在我们开始讲述以源文件方式编写Python程序之前，我们需要一个编辑器来写源文件。挑选一 个编辑器确实是极其重要的。你挑选一个编辑器就如同你挑选一辆你将购买的轿车一样。一个 好的编辑器会帮助你方便地编写Python程序，使你地编程旅程更加舒适，帮助你更加快捷安全 地到达目的地（实现目标）。对于编辑器的基本要求之一是语法加亮功能，利用这一功能，你的Python程序的不同部分被标 以不同的颜色，这样你可以更好 看清楚 你的程序，使它的运行显得形象化。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;如果你使用Windows，那么我建议你使用IDLE。IDLE具备语法加亮功能，还有许多其他的功 能，比如允许你在IDLE中运行你的程序。特别值得注意的是：不要使用Notepad——它是一个 糟糕的选择，因为它没有语法加亮功能，而且更加重要的是，它不支持文本缩进。而我们将会 看到文本缩进对于我们来说极其重要。一个好的编辑器，比如IDLE（还有VIM）将会自动帮助 你做这些事情。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;如果你使用Linux/FreeBSD，那么你有很多种选择。如果你是一位有经验的程序员，你一定已经 在使用VIM或者Emacs了。勿庸置疑，它们是两个功能最强大的编辑器。使用它们编写你的 Python程序，你将从中受益。我个人使用VIM编写我的大多数程序。如果你是一个初学编程的 人，那么你可以使用Kate，它也是我最喜欢的编辑器之一。只要你愿意花时间学习使用VIM或 Emacs，那么我强烈建议你一定要学习两者之一，因为从长远看来它们对你是极其有帮助的。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;如果你还想寻找一下其他可供选择的编辑器，可以看一下详尽的Python编辑器列表，然后作出 你的选择。你也可以使用Python的IDE（集成开发环境）。请看一下详尽的支持Python的IDE列 表以获得详尽的信息。一旦你开始编写大型的Python程序，IDE确实很有用。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;我再一次重申，请选择一个合适的编辑器——它能使编写Python程序变得更加有趣、方便</p>
+      <h2>2.4 使用源文件</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;现在让我们重新开始编程。当你学习一种新的编程语言的时候，你编写运行的第一个程序通常都是“Hello World”程序，这已经成为一种传统了。在你运行“Hello World”程序的时候，它 所做的事只是说声：“Hello World”。正如提出“Hello World”程序的Simon Cozens[1]所说：“它是编程之神的传统咒语，可以帮助你更好的学习语言。”</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;启动你选择的编辑器，输入下面这段程序，然后把它保存为helloworld.py。</p>
+      <p>例2.2 使用源文件</p>
+      <code>#!/usr/bin/python # Filename : helloworld.py print 'Hello World' </code>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;为了运行这个程序，请打开shell（Linux终端或者DOS提示符），然后键入命令python helloworld.py。如果你使用IDLE，请使用菜单Edit->Run Script或者使用键盘快捷方式Ctrl-F5。 输出如下所示。</p>
+      <code>$ python helloworld.py Hello World </code>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;如果你得到的输出与上面所示的一样，那么恭喜！——你已经成功地运行了你的第一个Python 程序。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;万一你得到一个错误，那么请确保你键入的程序准确无误 ，然后再运行一下程序。注意 Python是大小写敏感的，即print与Print不一样——注意前一个是小写p而后一个是大写P。另 外，确保在每一行的开始字符前没有空格或者制表符——我们将在后面讨论为什么这点是重要 的。</p>
+      <h2>2.5 它如何工作</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;让我们思考一下这个程序的前两行。它们被称作注释——任何在#符号右面的内容都是注释。 注释主要作为提供给程序读者的笔记。
+        Python至少应当有第一行那样的特殊形式的注释。它被称作 组织行 ——源文件的头两个字符 是#!，后面跟着一个程序。这行告诉你的Linux/Unix系统当你 执行 你的程序的时候，它应该运 行哪个解释器。这会在下一节做详细解释。注意，你总是可以通过直接在命令行指定解释器， 从而在任何平台上运行你的程序。就如同命令python helloworld.py一样。
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;在你的程序中合理地使用注释以解释一些重要的细节——这将有助于你的程序的读者轻松地理 解程序在干什么。记住，这个读者可能就是6个月以后的你！
+        跟在注释之后的是一句Python 语句 ——它只是打印文本“Hello World”。print实际上是一个 操作符，而“Hello World”被称为一个字符串——别担心我们会在后面详细解释这些术语。
+      </p>
+      <h2>2.6 可执行的Python程序</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;这部分内容只对Linux/Unix用户适用，不过Windows用户可能也对程序的第一行比较好奇。首 先我们需要通过chmod命令，给程序可执行的许可，然后 运行 程序。</p>
+      <code>$ chmod a+x helloworld.py $ ./helloworld.py Hello World </code>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;chmod命令用来 改变 文件的 模式 ，给系统中所有用户这个源文件的执行许可。然后我们可以 直接通过指定源文件的位置来执行程序。我们使用./来指示程序位于当前目录。
+        为了更加有趣一些，你可以把你的文件名改成仅仅helloworld，然后运行./helloworld。这样，这 个程序仍然可以工作，因为系统知道它必须用源文件第一行指定的那个解释器来运行程序。
+      </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;只要知道程序的确切位置，你现在就可以运行程序了——但是如果你希望你的程序能够从各个 位置运行呢？那样的话，你可以把你的程序保存在PATH环境变量中的目录之一。每当你运行 任何程序，系统会查找列在PATH环境变量中的各个目录。然后运行那个程序。你只要简单地 把这个源文件复制到PATH所列目录之一就可以使你的程序在任何位置都可用了。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;我们能够用echo命令来显示PATH变量，用$给变量名加前缀以向shell表示我们需要这个变量的 值。我们看到/home/swaroop/bin是PATH变量中的目录之一。swaroop是我的系统中使用的用户 名。通常，在你的系统中也会有一个相似的目录。你也可以把你选择的目录添加到PATH变量 中去——这可以通过运行PATH=$PATH:/home/swaroop/mydir完成，其中“/home/swaroop/ mydir”是我想要添加到PATH变量中的目录。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;当你想要在任何时间、任何地方运行你的程序的时候，这个方法十分有用。它就好像创造你自 己的指令，如同cd或其他Linux终端或DOS提示符命令那样。</p>
+      <p><b>&nbsp;&nbsp;&nbsp;&nbsp;提示:对于Python来说，程序、脚本或者软件都是指同一个东西</b></p>
+      <h2>2.7 获取帮助</h2>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;如果你需要某个Python函数或语句的快速信息帮助，那么你可以使用内建的help功能。尤其在 你使用带提示符的命令行的时候，它十分有用。比如，运行help(str)——这会显示str类的帮助。str类用于保存你的程序使用的各种文本（字符串）。类将在后面面向对象编程的章节详细 解释。</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;注释:按q退出帮助。 </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;类似地，你可以获取Python中几乎所有东西的信息。使用help()去学习更多关于help本身的东西！如果你想要获取关于如print那样操作符的帮助，那么你需要正确的设置PYTHONDOCS环境变 量。这可以在Linux/Unix中轻松地通过env命令完成。</p>
+      <code>$ env PYTHONDOCS=/usr/share/doc/python-docs-2.3.4/html/ python Python 2.3.4 (#1, Oct 26 2004, 16:42:40) [GCC 3.4.2 20041017 (Red Hat 3.4.2-6.fc3)] on linux2 Type "help", "copyright", "credits" or "license" for more information. >>> help('print') </code>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;你应该注意到我特意在“print”上使用了引号，那样Python就可以理解我是希望获取关 于“print”的帮助而不是想要它打印东西。注意，我使用的位置是在Fedora Core 3 Linux中的位置——它可能在不同的发行版和版本中有所不同/p>
+      <p>概括</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;你现在应该可以方便地编写、保存和运行Python程序了。既然你是一个Python用户，让我们学 习更多Python的概念。</p>
+
+  </div>
+</div>
+
+
+</body>
+</html>
